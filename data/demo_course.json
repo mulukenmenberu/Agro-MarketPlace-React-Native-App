@@ -1,0 +1,39 @@
+[
+    {
+        "name":"Product Design",
+        "Instructor":"Mrx ",
+        "discount_price":"180",
+        "origional_price":"100$",
+        "offer_upto":"10 hours"
+    },
+    {
+        "name":"React 101",
+        "Instructor":"Mrx ",
+        "discount_price":"200",
+        "origional_price":"100$",
+        "offer_upto":""
+    },
+    {
+        "name":"Spring MVC",
+        "Instructor":"Mrx ",
+        "discount_price":"1000",
+        "origional_price":"100$",
+        "offer_upto":"10 hours"
+    },
+    {
+        "name":"Spring MVC",
+        "Instructor":"Abe kebe ",
+        "discount_price":"0",
+        "origional_price":"100$",
+        "offer_upto":""
+    },
+    {
+        "name":"Advanced Python",
+        "Instructor":"Abe kebe ",
+        "discount_price":"0",
+        "origional_price":"100$",
+        "offer_upto":""
+    }
+    
+
+]
