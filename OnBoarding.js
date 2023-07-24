@@ -62,7 +62,8 @@ export default function OnBoarding({ navigation }) {
     <ImageBackground
       source={require('./assets/bg.png')} // Replace with the actual path to your image
       style={styles.container}>
-      <TouchableOpacity onPress={()=>navigation.navigate('LoginRegister')} style={{ marginTop:verticalScale(400),width: "80%", height: verticalScale(60), backgroundColor: 'green', borderRadius: moderateScale(10), alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{alignSelf:'center', marginTop:verticalScale(300),fontSize:moderateScale(20), color:'#fff'}}>Signup and explore various aggricultural products</Text>
+      <TouchableOpacity onPress={()=>navigation.navigate('LoginRegister')} style={{ marginTop:verticalScale(50),width: "80%", height: verticalScale(60), backgroundColor: 'green', borderRadius: moderateScale(10), alignItems: 'center', justifyContent: 'center' }}>
         <Text style={{ color: COLOR.heading1, fontSize: moderateScale(20) }}>Get Started</Text>
       </TouchableOpacity>
       <StatusBar backgroundColor={COLOR.loginBgColor} barStyle={COLOR.statusBarColor} />

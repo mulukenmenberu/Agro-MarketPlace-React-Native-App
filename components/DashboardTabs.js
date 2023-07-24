@@ -46,17 +46,7 @@ export default function DashboardTabs({ navigation }) {
         />
 
 
-        <Tab.Screen
-          name="My Orders"
-          component={Courses}
-          options={{
-            tabBarLabel: 'My Orders',
-            tabBarIcon: ({ color, size }) => (
-              <Entypo name="open-book" color={color} size={size} />
-
-            ),
-          }}
-        />
+    
 
 <Tab.Screen
           name="SearchTab"
@@ -79,16 +69,7 @@ export default function DashboardTabs({ navigation }) {
           }}
         />
           
-        <Tab.Screen
-          name="Account"
-          component={Account}
-          options={{
-            tabBarLabel: 'Account',
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="account" color={color} size={size} />
-            ),
-          }}
-        />
+      
       </Tab.Navigator>
       {/* <StatusBar style="light" /> */}
 

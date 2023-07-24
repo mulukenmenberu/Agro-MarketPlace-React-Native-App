@@ -7,7 +7,7 @@ import {
   Image, StatusBar,
   Button, TouchableWithoutFeedback,
   TouchableOpacity,
-  Dimensions, ScrollView, Alert,Keyboard,
+  Dimensions, ScrollView, Alert, Keyboard,
   RefreshControl, PanResponder, FlatList
 } from "react-native";
 import { Slider } from '@miblanchard/react-native-slider';
@@ -145,24 +145,24 @@ export default function DashBoard({ navigation }) {
   ];
 
   const windowWidth = Dimensions.get('window').width;
-const numColumns = 2;
-const cardWidth = (windowWidth - 20) / numColumns - 10; // Subtract margins and padding
+  const numColumns = 2;
+  const cardWidth = (windowWidth - 20) / numColumns - 10; // Subtract margins and padding
 
-useEffect(() => {
-  const keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', () => {
-    setKeyboardVisible(true);
-  });
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', () => {
+      setKeyboardVisible(true);
+    });
 
-  const keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', () => {
-    setKeyboardVisible(false);
-  });
+    const keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', () => {
+      setKeyboardVisible(false);
+    });
 
-  // Clean up the event listeners when component unmounts
-  return () => {
-    keyboardDidShowListener.remove();
-    keyboardDidHideListener.remove();
-  };
-}, []);
+    // Clean up the event listeners when component unmounts
+    return () => {
+      keyboardDidShowListener.remove();
+      keyboardDidHideListener.remove();
+    };
+  }, []);
 
   const renderCourseCard = ({ item }) => {
     return (
@@ -189,20 +189,13 @@ useEffect(() => {
     <View style={styles.container}>
       <View style={styles.topCard}>
         <View>
-          <Text style={{ fontSize: moderateScale(15), color: COLOR.textonButton }}>Hi , {full_name}</Text>
-          <Text style={{ fontSize: moderateScale(15), color: COLOR.textonButton }}>Let's start learning</Text>
+          <Icon onPress={() => refRBSheet.current.open()} name="menu-unfold" size={moderateScale(24)} color={COLOR.labelColor} />
         </View>
-        <TouchableOpacity onPress={() => navigation.navigate('Account')}>
+        <View>
 
-          <Image
-            style={{
-              alignSelf: 'center',
-              width: horizontalScale(80),
-              height: verticalScale(70)
-            }}
-            source={require('../assets/svg/default-avatar.png')}
-          />
-        </TouchableOpacity>
+        </View>
+        <Icon onPress={() => refRBSheet.current.open()} name="menu-unfold" size={moderateScale(24)} color={COLOR.labelColor} />
+
 
 
 
@@ -211,8 +204,8 @@ useEffect(() => {
 
 
       <View style={styles.registerCard} >
-        <View style={!isKeyboardVisible?styles.infoCard : styles.infoCardK} >
-          <View style={{ justifyContent: 'center', alignItems: 'center', paddingLeft: horizontalScale(10), paddingRight: horizontalScale(10), fontSize: moderateScale(17), height: verticalScale(48), width: "100%", alignSelf: 'center', borderWidth: 2, backgroundColor: COLOR.lightBg, borderRadius: moderateScale(20), borderColor: COLOR.lightBg, flexDirection: 'row' }}>
+        <View style={!isKeyboardVisible ? styles.infoCard : styles.infoCardK} >
+          <View style={{ justifyContent: 'center', alignItems: 'center', paddingLeft: horizontalScale(10), paddingRight: horizontalScale(10), fontSize: moderateScale(17), height: verticalScale(48), width: "90%", alignSelf: 'center', borderWidth: 2, backgroundColor: COLOR.lightBg, borderRadius: moderateScale(20), borderColor: COLOR.lightBg, flexDirection: 'row' }}>
             <Icon name="search1" size={moderateScale(24)} color={COLOR.labelColor} />
             <TextInput
               style={{ flex: 3, height: verticalScale(47), backgroundColor: COLOR.lightBg, color: COLOR.labelColor }}
@@ -223,7 +216,6 @@ useEffect(() => {
               onBlur={searchFilter}
             />
 
-            {/* <Icon onPress={() => refRBSheet.current.open()} name="menu-unfold" size={moderateScale(24)} color={COLOR.labelColor} /> */}
 
           </View>
         </View>
@@ -237,18 +229,18 @@ useEffect(() => {
               />
             }>
 
-            <View style={{ alignItems:'center' }}>
-          
-                <View style={{ borderRadius: 13, marginTop: 10, alignSelf:'center', backgroundColor: '#CEECFE', width: "97%", height: verticalScale(100) }}>
-                  <Text style={{ fontSize: moderateScale(15), padding: 10 }}>What do you want to learn today</Text>
-                  <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-            
-            
-                  </View>
+            <View style={{ alignItems: 'center' }}>
+
+              <View style={{ borderRadius: 13, marginTop: verticalScale(30), alignSelf: 'center', backgroundColor: '#CEECFE', width: "97%", height: verticalScale(120) }}>
+                <Text style={{ fontSize: moderateScale(15), padding: 10 }}>What do you want to learn today</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
+
+
                 </View>
-      
+              </View>
+
             </View>
-            
+
             <View>
               {typeof progressCourseList !== 'undefined' && progressCourseList.length > 0 ? (
                 <FlatList
@@ -366,7 +358,7 @@ const styles = StyleSheet.create({
     // width: "90%",
     width: dimention.width - 60,
     height: verticalScale(80),
-    marginTop: verticalScale(-90),
+    marginTop: verticalScale(-179),
     // shadowColor: '#171717',
     // shadowOffset: {width: -2, height: 4},
     // shadowOpacity: 1,
@@ -388,7 +380,7 @@ const styles = StyleSheet.create({
     padding: 5,
     // marginLeft: 20,
     // marginRight: 20,
-    margin:'auto',
+    margin: 'auto',
     marginTop: verticalScale(10),
     backgroundColor: COLOR.darkWhite,
     borderRadius: 15,
