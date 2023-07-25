@@ -29,8 +29,23 @@ const ItemViews = ({ navigation, route }) => {
             <View style={[styles.videoCard, { backgroundColor: COLOR.darkBg, }]}>
                 {/* <Icon onPress={() => navigation.navigate('DashboardTabs')} name='chevron-back' size={moderateScale(25)} color={COLOR.labelColor} /> */}
                 <View style={{ paddingTop: verticalScale(40), paddingLeft: horizontalScale(10) }}>
-                    <Text style={{ color: 'orange', fontSize: moderateScale(25) }}>John Smith</Text>
+                <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                <Text style={{ color: 'orange', fontSize: moderateScale(25) }}>John Smith</Text>
+
+                    <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: verticalScale(50), width: horizontalScale(140), borderRadius: moderateScale(20) }}>
+                            <AntDesign name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
+                            <Icon2 name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
+                            <Icon2 name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
+                            <Icon2 name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
+                            <Icon2 name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
+                        </TouchableOpacity>
+                        </View>
+
                     <Text style={{ color: '#fff', fontSize: moderateScale(17) }}>Farmer (provides delivery service, vigitables and fruites)</Text>
+                    <Text style={{ paddingTop: verticalScale(10), fontSize: moderateScale(23), color: COLOR.labelColor }}>About Supplier</Text>
+                    <Text style={{ color: COLOR.labelColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finterdum urna</Text>
+           
+                        <Text >3.5 rating, (134 orders, 97% satisfaction rate)</Text>
                 </View>
 
                 <Icon onPress={() => navigation.navigate('DashboardTabs')}
@@ -64,14 +79,7 @@ const ItemViews = ({ navigation, route }) => {
                     </View>
                     <View style={{ marginTop: verticalScale(25) }}>
                         <Text style={{ color: COLOR.labelColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis odio eget tincidunt convallis. Quisque vulputate nunc elit, in varius metus tincidunt vel. Nam nec nisi tincidunt, aliquam felis at, euismod elit. Nullam scelerisque eros in neque euismod tempus. Fusce interdum urna</Text>
-                        <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: verticalScale(50), width: horizontalScale(140), borderRadius: moderateScale(20) }}>
-                            <AntDesign name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
-                            <Icon2 name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
-                            <Icon2 name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
-                            <Icon2 name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
-                            <Icon2 name='staro' size={moderateScale(20)} color={COLOR.starRatingColor} />
-
-                        </TouchableOpacity>
+                    
                     </View>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', paddingTop: verticalScale(10) }}>
 
@@ -91,10 +99,10 @@ const ItemViews = ({ navigation, route }) => {
 
                         </TouchableOpacity>
                     </View>
-                    <Text style={{ paddingTop: verticalScale(10), fontSize: moderateScale(23), color: COLOR.labelColor }}>About Supplier</Text>
-                    <Text style={{ color: COLOR.labelColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finterdum urna</Text>
+
                     <View>
-                        {/* <Card style={{ paddingLeft: horizontalScale(10), paddingRight: horizontalScale(10), paddingTop: verticalScale(10), paddingBottom: verticalScale(10), marginTop: verticalScale(15), backgroundColor: COLOR.lightBg, width: '96%', alignSelf: 'center' }}>
+                        <ScrollView horizontal={true}>
+                        <Card style={{ paddingLeft: horizontalScale(10), paddingRight: horizontalScale(10), paddingTop: verticalScale(10), paddingBottom: verticalScale(10), marginTop: verticalScale(15), backgroundColor: COLOR.lightBg, width: '96%', alignSelf: 'center' }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <View style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
                                     <View style={{ width: horizontalScale(80), height: verticalScale(80), borderRadius: moderateScale(20), backgroundColor: '#D8FFEF' }}>
@@ -111,7 +119,26 @@ const ItemViews = ({ navigation, route }) => {
                             <View style={{ marginTop: verticalScale(10) }}>
                                 <Text style={{ color: '#858597' }}>{"message"}</Text>
                             </View>
-                        </Card> */}
+                        </Card> 
+                        <Card style={{ paddingLeft: horizontalScale(10), paddingRight: horizontalScale(10), paddingTop: verticalScale(10), paddingBottom: verticalScale(10), marginTop: verticalScale(15), backgroundColor: COLOR.lightBg, width: '96%', alignSelf: 'center' }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                <View style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
+                                    <View style={{ width: horizontalScale(80), height: verticalScale(80), borderRadius: moderateScale(20), backgroundColor: '#D8FFEF' }}>
+
+                                    </View>
+                                    <View style={{ marginLeft: horizontalScale(10) }}>
+                                        <Text style={{ color: COLOR.heading1 }}>{"Notification "}</Text>
+                                        <Text style={{ color: COLOR.heading1 }}>Notification content</Text>
+                                    </View>
+                                </View>
+                                <Text style={{ color: '#858597' }}>{"notification"}</Text>
+                            </View>
+
+                            <View style={{ marginTop: verticalScale(10) }}>
+                                <Text style={{ color: '#858597' }}>{"message"}</Text>
+                            </View>
+                        </Card> 
+                        </ScrollView>
                     </View>
 
                     <View style={{ paddingTop: verticalScale(70), flexDirection: 'row', justifyContent: 'space-around' }}>
