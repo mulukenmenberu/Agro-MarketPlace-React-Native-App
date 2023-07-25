@@ -62,7 +62,9 @@ export default function OnBoarding({ navigation }) {
     <ImageBackground
       source={require('./assets/bg.png')} // Replace with the actual path to your image
       style={styles.container}>
-        <Text style={{alignSelf:'center', marginTop:verticalScale(300),fontSize:moderateScale(20), color:'#fff'}}>Signup and explore various aggricultural products</Text>
+           <Text style={styles.centeredText}>
+        Signup and explore various agricultural products
+      </Text>
       <TouchableOpacity onPress={()=>navigation.navigate('LoginRegister')} style={{ marginTop:verticalScale(50),width: "80%", height: verticalScale(60), backgroundColor: 'green', borderRadius: moderateScale(10), alignItems: 'center', justifyContent: 'center' }}>
         <Text style={{ color: COLOR.heading1, fontSize: moderateScale(20) }}>Get Started</Text>
       </TouchableOpacity>
@@ -101,5 +103,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 25
+  },
+  centeredText: {
+    alignSelf: 'center', // Center the text horizontally
+    fontSize: moderateScale(30),
+    textAlign: 'center', // Center the text horizontally
+    color: '#fff',
+    // Add any other text styles you want here
+    marginTop:verticalScale(250),
   },
 });

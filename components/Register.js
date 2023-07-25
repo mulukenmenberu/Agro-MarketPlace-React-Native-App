@@ -210,14 +210,6 @@ export default function Register({ chnagePage, navigation }) {
 
           <Text style={{ color: 'red', alignSelf: 'center' }}>{setRegistrMessage}</Text>
 
-          <Text style={{ fontSize: moderateScale(15), color: COLOR.textColor, alignSelf: 'center' }}>Have an account? <Text onPress={() => chnagePages('login')} style={{ color: COLOR.sliderActive }}>Log In</Text></Text>
-
-
-          <Text style={{ fontSize: moderateScale(15), color: COLOR.textColor, alignSelf: 'center', marginTop: verticalScale(10) }}>Signup With</Text>
-          <View style={{ flexDirection: 'row', paddingVertical: verticalScale(10), alignSelf: 'center' }}>
-
-          </View>
-
         </View>
       </Card>
 

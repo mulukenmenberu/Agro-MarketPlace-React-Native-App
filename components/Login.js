@@ -173,7 +173,6 @@ export default function Login({ chnagePage, navigation }) {
           </Pressable>
           <Text style={{ color: 'red', alignSelf: 'center' }}>{loginErrormessage}</Text>
           <Text style={{ fontSize: moderateScale(15), color: COLOR.textColor, alignSelf: 'center' }}>Don't have an account? <Text onPress={() => chnagePages('register')} style={{ color: COLOR.sliderActive }}>Sign Up</Text></Text>
-          <Text style={{ fontSize: moderateScale(15), color: COLOR.textColor, alignSelf: 'center', marginTop: verticalScale(10) }}>Continue With</Text>
           <View style={{ flexDirection: 'row', paddingVertical: verticalScale(20), alignSelf: 'center' }}>
 
           </View>
