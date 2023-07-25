@@ -166,7 +166,7 @@ export default function DashBoard({ navigation }) {
 
   const renderCourseCard = ({ item }) => {
     return (
-      <Card onPress={() => navigation.navigate('CoursePreview')} style={[styles.progressCard, { width: cardWidth }]} >
+      <Card onPress={() => navigation.navigate('ItemViews')} style={[styles.progressCard, { width: cardWidth }]} >
         <View style={styles.cardContainer}>
           <Image
             source={{ uri: item.thumb_image }}

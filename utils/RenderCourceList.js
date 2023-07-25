@@ -17,7 +17,7 @@ import { readUser } from '../config/Realm';
 const Item = ({ name, instructor, price, navigation, course_slug, course_id, is_enrolled, student_id,duration,thumb_image }) => (
   <Card style={styles.progressCard} onPress={() => 
                                                student_id==0?navigation.navigate('GuestView'):
-                                                navigation.navigate('CoursePreview', { course_id, is_enrolled, student_id })}>
+                                                navigation.navigate('ItemViews', { course_id, is_enrolled, student_id })}>
     <View style={{ flexDirection: 'row' }}>
       {/* <View style={{
         width: horizontalScale(70), height: verticalScale(80), borderRadius: moderateScale(15),

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { horizontalScale, verticalScale, moderateScale } from '../config/Device'
 import { Card } from 'react-native-paper'
 import { COLOR } from '../config/Color'
-const Courses = () => {
+const Items = () => {
     const [activetab, setActiveTab] = useState(0)
     return (
         // <SafeAreaView>
@@ -13,7 +13,7 @@ const Courses = () => {
                 <View style={{ paddingTop: verticalScale(50), flexDirection: 'row', justifyContent: 'space-evenly' }}>
                     <View>
                         <Pressable onPress = {()=>setActiveTab(0)}>
-                    <Text style={{color:COLOR.labelColor, fontSize: moderateScale(15) }}>Courses</Text>
+                    <Text style={{color:COLOR.labelColor, fontSize: moderateScale(15) }}>Items</Text>
                     </Pressable>
                     {activetab==0?<View style={styles.underline}></View>:''}
 
@@ -74,7 +74,7 @@ const Courses = () => {
     )
 }
 
-export default Courses
+export default Items
 
 const styles = StyleSheet.create({
     container: {

@@ -1,6 +1,6 @@
 # required apis for  the app
 
-## My Courses (courses_taken) api
+## My Items (courses_taken) api
 ```
     {
         "today_progress": {

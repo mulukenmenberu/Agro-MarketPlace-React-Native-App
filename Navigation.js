@@ -11,9 +11,9 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import DashBoard from "./components/DashBoard";
 import  DashboardTabs  from "./components/DashboardTabs";
-import CoursePreview from "./components/CoursePreview";
-import Courses from "./components/Courses";
-import CourseContent from "./components/CourseContent";
+import ItemViews from "./components/ItemViews";
+import Items from "./components/Items";
+import ItemDetail from "./components/ItemDetail";
 import { getData, setData } from './storage/Storage';
 export default function Navigation() {
   const [introViewed, setIntroViewed] = useState(false);
@@ -44,9 +44,9 @@ export default function Navigation() {
       <stack.Screen name="Login" component={Login} />
       <stack.Screen name="Register" component={Register} />
       <stack.Screen name="DashboardTabs" component={DashboardTabs} />
-      <stack.Screen name="CoursePreview" component={CoursePreview} />
-      <stack.Screen name="Courses" component={Courses} />
-      <stack.Screen name="CourseContent" component={CourseContent} />
+      <stack.Screen name="ItemViews" component={ItemViews} />
+      <stack.Screen name="Items" component={Items} />
+      <stack.Screen name="ItemDetail" component={ItemDetail} />
 
     </stack.Navigator>
   );

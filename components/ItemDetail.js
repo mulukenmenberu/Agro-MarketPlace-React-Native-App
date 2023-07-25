@@ -11,7 +11,7 @@ import { readUser } from '../config/Realm';
 import { getSingleCourseDetail } from '../redux/reducers/myCourseSlice'
 import { useSelector, useDispatch } from 'react-redux'
 
-const CourseContent = ({ navigation, route }) => {
+const ItemDetail = ({ navigation, route }) => {
     const videoUri = 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
     const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -117,7 +117,7 @@ const CourseContent = ({ navigation, route }) => {
     )
 }
 
-export default CourseContent
+export default ItemDetail
 
 const styles = StyleSheet.create({
     videoCard: {

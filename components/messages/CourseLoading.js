@@ -19,7 +19,7 @@ const CourseLoading = () => {
             <SkeletonPlaceholder>
                
 
-                <Card style={styles.progressCard} onPress={() => navigation.navigate('CoursePreview')}>
+                <Card style={styles.progressCard} onPress={() => navigation.navigate('ItemViews')}>
                     <View style={{ flexDirection: 'row' }}>
                         <View style={{
                             width: horizontalScale(70), height: verticalScale(80), borderRadius: moderateScale(15),
@@ -44,7 +44,7 @@ const CourseLoading = () => {
                     </View>
                 </Card>
 
-                <Card style={styles.progressCard} onPress={() => navigation.navigate('CoursePreview')}>
+                <Card style={styles.progressCard} onPress={() => navigation.navigate('ItemViews')}>
                     <View style={{ flexDirection: 'row' }}>
                         <View style={{
                             width: horizontalScale(70), height: verticalScale(80), borderRadius: moderateScale(15),
@@ -69,7 +69,7 @@ const CourseLoading = () => {
                     </View>
                 </Card>
 
-                <Card style={styles.progressCard} onPress={() => navigation.navigate('CoursePreview')}>
+                <Card style={styles.progressCard} onPress={() => navigation.navigate('ItemViews')}>
                     <View style={{ flexDirection: 'row' }}>
                         <View style={{
                             width: horizontalScale(70), height: verticalScale(80), borderRadius: moderateScale(15),

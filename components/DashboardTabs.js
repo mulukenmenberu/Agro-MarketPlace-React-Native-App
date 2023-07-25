@@ -11,7 +11,7 @@ import Messages from './Messages';
 import Account from './Account';
 const Tab = createBottomTabNavigator();
 import DashBoard from './DashBoard';
-import Courses from './Courses';
+import Items from './Items';
 import { TouchableOpacity,StyleSheet, Image,View, Text } from 'react-native';
 import { horizontalScale, verticalScale } from '../config/Device';
 

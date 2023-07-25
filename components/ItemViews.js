@@ -18,7 +18,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import Loader from "./messages/Loader";
 import { readUser } from "../config/Realm";
 import { generatePreview } from '../utils/generateCoursePreview';
-const CoursePreview = ({ navigation, route }) => {
+const ItemViews = ({ navigation, route }) => {
 
 
     const courseList = [{}]
@@ -138,7 +138,7 @@ const CoursePreview = ({ navigation, route }) => {
     )
 }
 
-export default CoursePreview
+export default ItemViews
 
 const styles = StyleSheet.create({
     videoCard: {
