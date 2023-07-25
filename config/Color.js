@@ -18,7 +18,7 @@ const COLOR = {
     statusBarColor2: 'light-content',
     textBoxColor: '#F0F0F2',
     iconColor: '#B8B8D2',
-    coursePreviewColor: '#FFE7EE'
+    ItemPreviewColor: '#FFE7EE'
 }
 
 

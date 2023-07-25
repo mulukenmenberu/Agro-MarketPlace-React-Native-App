@@ -13,15 +13,15 @@ import { Card } from 'react-native-paper'
 import SvgUri from 'react-native-svg-uri';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 const { width, height } = Dimensions.get('window');
-import { enrollCourse, getSingleCourseDetail, resetState } from '../redux/reducers/myCourseSlice'
+import { enrollItem, getSingleItemDetail, resetState } from '../redux/reducers/myItemSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import Loader from "./messages/Loader";
 import { readUser } from "../config/Realm";
-import { generatePreview } from '../utils/generateCoursePreview';
+import { generatePreview } from '../utils/generateItemPreview';
 const ItemViews = ({ navigation, route }) => {
 
 
-    const courseList = [{}]
+    const ItemList = [{}]
 
     return (
         // <SafeAreaView>
@@ -46,7 +46,7 @@ const ItemViews = ({ navigation, route }) => {
                     {/* <ScrollView> */}
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View>
-                            <Text style={{ fontWeight: 'bold', fontSize: moderateScale(20), color: COLOR.heading1 }}>{courseList[0]?.course_title ?? "No course title"}</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: moderateScale(20), color: COLOR.heading1 }}>{ItemList[0]?.Item_title ?? "No Items title"}</Text>
                             <Text style={{ fontSize: moderateScale(23), color: COLOR.labelColor }}>Product Description</Text>
                         </View>
 

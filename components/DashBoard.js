@@ -27,7 +27,7 @@ import Loading from "./messages/Loading";
 import { readUser } from "../config/Realm";
 
 import Loader from "./messages/Loader";
-import { getCoursesProgress } from '../redux/reducers/myCourseSlice'
+import { getItemsProgress } from '../redux/reducers/myItemSlice'
 import RBSheet from "react-native-raw-bottom-sheet";
 
 export default function DashBoard({ navigation }) {
@@ -43,7 +43,7 @@ export default function DashBoard({ navigation }) {
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
 
   const dispatch = useDispatch()
-  let { progressCourseList, loading } = useSelector((state) => state.mycourse)
+  let { progressItemList, loading } = useSelector((state) => state.myItem)
 
   const refRBSheet = useRef();
 
@@ -53,7 +53,7 @@ export default function DashBoard({ navigation }) {
     const userData = readUser();
     setFullName(userData[0].full_name)
     setStudentId(userData[0].user_id)
-    dispatch(getCoursesProgress(userData[0].user_id))
+    dispatch(getItemsProgress(userData[0].user_id))
 
     setRefreshing(false);
 
@@ -64,10 +64,10 @@ export default function DashBoard({ navigation }) {
       const userData = readUser();
       setFullName(userData[0].full_name)
       setStudentId(userData[0].user_id)
-      dispatch(getCoursesProgress(userData[0].user_id))
+      dispatch(getItemsProgress(userData[0].user_id))
 
     } catch (e) { }
-    // setCourseList(courseList)
+    // setItemList(ItemList)
   }, [full_name])
 
   const bottomShetOpened = () => {
@@ -82,62 +82,62 @@ export default function DashBoard({ navigation }) {
     if (searchTerm.length > 0) {
 
       // dispatch(resetState())
-      // dispatch(searchCourse(searchTerm))
+      // dispatch(searchItem(searchTerm))
     } else {
       // dispatch(resetState())
-      // dispatch(getAllCourse(active))
+      // dispatch(getAllItem(active))
     }
 
   }
 
-  // Dummy data for progressCourseList
-  progressCourseList = [
+  // Dummy data for progressItemList
+  progressItemList = [
     {
       id: 1,
-      course_title: 'Course 1',
-      thumb_image: 'https://example.com/images/course1.jpg',
+      Item_title: 'Item 1',
+      thumb_image: 'https://example.com/images/Item1.jpg',
       progress: 25,
     },
     {
       id: 2,
-      course_title: 'Course 2',
-      thumb_image: 'https://example.com/images/course2.jpg',
+      Item_title: 'Item 2',
+      thumb_image: 'https://example.com/images/Item2.jpg',
       progress: 50,
     },
     {
       id: 3,
-      course_title: 'Course 3',
-      thumb_image: 'https://example.com/images/course3.jpg',
+      Item_title: 'Item 3',
+      thumb_image: 'https://example.com/images/Item3.jpg',
       progress: 75,
     },
     {
       id: 4,
-      course_title: 'Course 4',
-      thumb_image: 'https://example.com/images/course4.jpg',
+      Item_title: 'Item 4',
+      thumb_image: 'https://example.com/images/Item4.jpg',
       progress: 100,
     },
     {
       id: 1,
-      course_title: 'Course 1',
-      thumb_image: 'https://example.com/images/course1.jpg',
+      Item_title: 'Item 1',
+      thumb_image: 'https://example.com/images/Item1.jpg',
       progress: 25,
     },
     {
       id: 2,
-      course_title: 'Course 2',
-      thumb_image: 'https://example.com/images/course2.jpg',
+      Item_title: 'Item 2',
+      thumb_image: 'https://example.com/images/Item2.jpg',
       progress: 50,
     },
     {
       id: 3,
-      course_title: 'Course 3',
-      thumb_image: 'https://example.com/images/course3.jpg',
+      Item_title: 'Item 3',
+      thumb_image: 'https://example.com/images/Item3.jpg',
       progress: 75,
     },
     {
       id: 4,
-      course_title: 'Course 4',
-      thumb_image: 'https://example.com/images/course4.jpg',
+      Item_title: 'Item 4',
+      thumb_image: 'https://example.com/images/Item4.jpg',
       progress: 100,
     },
     // Add more dummy data as needed
@@ -163,16 +163,16 @@ export default function DashBoard({ navigation }) {
     };
   }, []);
 
-  const renderCourseCard = ({ item }) => {
+  const renderItemCard = ({ item }) => {
     return (
       <Card onPress={() => navigation.navigate('ItemViews')} style={[styles.progressCard, { width: cardWidth }]} >
         <View style={styles.cardContainer}>
           <Image
             source={{ uri: item.thumb_image }}
-            style={styles.courseImage}
+            style={styles.ItemImage}
           />
-          <View style={styles.courseInfo}>
-            <Text style={styles.courseTitle}>{item.course_title}</Text>
+          <View style={styles.ItemInfo}>
+            <Text style={styles.ItemTitle}>{item.Item_title}</Text>
             <Text style={styles.teacherName}>No teacher name</Text>
             <View style={styles.progressBarContainer}>
             </View>
@@ -241,16 +241,16 @@ export default function DashBoard({ navigation }) {
             </View>
 
             <View>
-              {typeof progressCourseList !== 'undefined' && progressCourseList.length > 0 ? (
+              {typeof progressItemList !== 'undefined' && progressItemList.length > 0 ? (
                 <FlatList
-                  data={progressCourseList}
-                  renderItem={renderCourseCard}
+                  data={progressItemList}
+                  renderItem={renderItemCard}
                   keyExtractor={(item) => item.id.toString()}
                   numColumns={2}
                   columnWrapperStyle={styles.columnWrapper} // Added this style
                 />
               ) : (
-                <Text style={styles.noCoursesText}>No inprogress courses available</Text>
+                <Text style={styles.noItemsText}>No inprogress Items available</Text>
               )}
             </View>
           </ScrollView>

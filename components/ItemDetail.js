@@ -7,19 +7,19 @@ import SvgUri from 'react-native-svg-uri';
 const { width, height } = Dimensions.get('window');
 import Loader from './messages/Loader';
 import { readUser } from '../config/Realm';
-import { getSingleCourseDetail } from '../redux/reducers/myCourseSlice'
+import { getSingleItemDetail } from '../redux/reducers/myItemSlice'
 import { useSelector, useDispatch } from 'react-redux'
 
 const ItemDetail = ({ navigation, route }) => {
     const videoUri = 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
     const [isFullscreen, setIsFullscreen] = useState(false);
 
-    const [course_id, setCourseId] = useState(route.params.course_id);
+    const [Item_id, setItemId] = useState(route.params.Item_id);
     const [student_id, setStudentId] = useState(route.params.student_id);
     const [progress, setprogress] = useState(false)
 
     const dispatch = useDispatch()
-    const { has_enrolled, loading, courseList } = useSelector((state) => state.mycourse)
+    const { has_enrolled, loading, ItemList } = useSelector((state) => state.myItem)
 
 
 
@@ -28,7 +28,7 @@ const ItemDetail = ({ navigation, route }) => {
 
         setStudentId(userData[0].user_id)
 
-        dispatch(getSingleCourseDetail({ student_id: userData[0].user_id, course_id: course_id }))
+        dispatch(getSingleItemDetail({ student_id: userData[0].user_id, Item_id: Item_id }))
         if (loading) {
             setprogress(true)
 
@@ -36,10 +36,10 @@ const ItemDetail = ({ navigation, route }) => {
     }, [])
     const data2 = [];
     try {
-        const courses = courseList[0];
+        const Items = ItemList[0];
 
-        // courses.forEach(course => {
-        courses.contents.forEach((contentObj, index) => {
+        // Items.forEach(Items => {
+        Items.contents.forEach((contentObj, index) => {
 
             const key = Object.keys(contentObj)[0]; // Assuming there's only one key in each object
 
@@ -63,7 +63,7 @@ const ItemDetail = ({ navigation, route }) => {
         console.log(e)
         // Alert.alert("skjnk")
     }
-    const EmptyCourseContent = () => {
+    const EmptyItemContent = () => {
         return (
           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingTop:verticalScale(150)}}>
             <Text style={{fontSize:moderateScale(20),  color:COLOR.heading1 }}>No data available.</Text>
@@ -74,7 +74,7 @@ const ItemDetail = ({ navigation, route }) => {
     return (
         // <SafeAreaView>
         <>
-            <View style={!isFullscreen ? [styles.videoCard, { backgroundColor: COLOR.coursePreviewColor, }] : { width: "100%", height: "100%" }}>
+            <View style={!isFullscreen ? [styles.videoCard, { backgroundColor: COLOR.ItemPreviewColor, }] : { width: "100%", height: "100%" }}>
                 <Image
                     source={{ uri: 'https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2FbLy3JtIoQ8y8PDs4tFem&w=3840&q=75' }}
                     style={{ width: "100%", height: '100%' }}

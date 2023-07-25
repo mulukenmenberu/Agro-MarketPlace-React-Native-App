@@ -3,10 +3,10 @@ import { baseURL } from "../../config/baseApi";
 
 
 
-export const enrollCourse = createAsyncThunk( "enrollCourse", async (data) => {
+export const enrollItem = createAsyncThunk( "enrollItem", async (data) => {
     const enrolment = data
     try {
-      const response = await baseURL.post('course-takens', enrolment);
+      const response = await baseURL.post('Items-takens', enrolment);
       const { data, headers } = response;
       const payload = { responseData: data, authorization: headers.authorization };
       return payload;
@@ -17,10 +17,10 @@ export const enrollCourse = createAsyncThunk( "enrollCourse", async (data) => {
   
 );
 
-export const getMyCourses = createAsyncThunk( "getMyCourses", async (student_id) => {
+export const getMyItems = createAsyncThunk( "getMyItems", async (student_id) => {
   const enrolment_id = student_id
   try {
-    const response = await baseURL.get(`students/${enrolment_id}/courses`);
+    const response = await baseURL.get(`students/${enrolment_id}/Items`);
     const { data, headers } = response;
     const payload = { responseData: data, authorization: headers.authorization };
     return payload;
@@ -31,13 +31,13 @@ export const getMyCourses = createAsyncThunk( "getMyCourses", async (student_id)
 
 );
 
-export const getCoursesProgress = createAsyncThunk( "getCoursesProgress", async (student_id) => {
+export const getItemsProgress = createAsyncThunk( "getItemsProgress", async (student_id) => {
   const enrolment_id = student_id
   
   try {
-    const response = await baseURL.get(`students/${enrolment_id}/courses`);
+    const response = await baseURL.get(`students/${enrolment_id}/Items`);
     const { data, headers } = response;
-    const payload = { responseData: data.student_detail[0].courses, authorization: headers.authorization };
+    const payload = { responseData: data.student_detail[0].Items, authorization: headers.authorization };
   
     return payload;
   } catch (error) {
@@ -46,11 +46,11 @@ export const getCoursesProgress = createAsyncThunk( "getCoursesProgress", async 
 }
 
 );
-export const getSingleCourseDetail = createAsyncThunk( "getSingleCourseDetail", async ({student_id, course_id}) => {
+export const getSingleItemDetail = createAsyncThunk( "getSingleItemDetail", async ({student_id, Item_id}) => {
   try {
-    const response = await baseURL.get(`students/${student_id}/courses/${course_id}/contents`);
+    const response = await baseURL.get(`students/${student_id}/Items/${Item_id}/contents`);
     const { data, headers } = response;
-    const payload = { responseData: data.students[0].courses, authorization: headers.authorization };
+    const payload = { responseData: data.students[0].Items, authorization: headers.authorization };
     return payload;
   } catch (error) {
     return rejectWithValue(error.response.data);
@@ -61,11 +61,11 @@ export const getSingleCourseDetail = createAsyncThunk( "getSingleCourseDetail", 
 export const resetState = createAsyncThunk("reset", async () => {
   return true;
 });
-const myCourseSlice = createSlice({
-  name: "mycourse",
+const myItemSlice = createSlice({
+  name: "myItem",
   initialState: {
-    courseList: [],
-    progressCourseList: [],
+    ItemList: [],
+    progressItemList: [],
     loading: false,
     has_enrolled: false,
     authorization: null, 
@@ -73,62 +73,62 @@ const myCourseSlice = createSlice({
   reducers: {},
   extraReducers: {
 
-    // Enroll to course
-    [enrollCourse.pending]: (state, action) => {
+    // Enroll to Items
+    [enrollItem.pending]: (state, action) => {
       // state.loading = true;
       state.has_enrolled = false;
     },
-    [enrollCourse.fulfilled]: (state, action) => {
+    [enrollItem.fulfilled]: (state, action) => {
       // state.loading = false;
       state.has_enrolled = true;
-      state.courseList= action.payload.responseData;
+      state.ItemList= action.payload.responseData;
       state.authorization = action.payload.authorization; 
     },
-    [enrollCourse.rejected]: (state, action) => {
+    [enrollItem.rejected]: (state, action) => {
       // state.loading = false;
       state.has_enrolled = false;
     },
 
-    /// Fetch my courses
-    [getMyCourses.pending]: (state, action) => {
+    /// Fetch my Items
+    [getMyItems.pending]: (state, action) => {
       state.loading = true;
       state.has_enrolled = false;
     },
-    [getMyCourses.fulfilled]: (state, action) => {
+    [getMyItems.fulfilled]: (state, action) => {
       state.loading = false;
-      state.courseList= action.payload.responseData;
+      state.ItemList= action.payload.responseData;
       state.authorization = action.payload.authorization; 
     },
-    [getMyCourses.rejected]: (state, action) => {
+    [getMyItems.rejected]: (state, action) => {
       state.loading = false;
       state.has_enrolled = false;
     },
-    /// Fetch my courses
-    [getCoursesProgress.pending]: (state, action) => {
+    /// Fetch my Items
+    [getItemsProgress.pending]: (state, action) => {
       state.loading = true;
       state.has_enrolled = false;
     },
-    [getCoursesProgress.fulfilled]: (state, action) => {
+    [getItemsProgress.fulfilled]: (state, action) => {
       state.loading = false;
-      state.progressCourseList = action.payload.responseData;
+      state.progressItemList = action.payload.responseData;
       state.authorization = action.payload.authorization; 
     },
-    [getCoursesProgress.rejected]: (state, action) => {
+    [getItemsProgress.rejected]: (state, action) => {
       state.loading = false;
       state.has_enrolled = false;
     },
 
     /// Fetch single couse
-    [getSingleCourseDetail.pending]: (state, action) => {
+    [getSingleItemDetail.pending]: (state, action) => {
       state.loading = true;
       state.has_enrolled = false;
     },
-    [getSingleCourseDetail.fulfilled]: (state, action) => {
+    [getSingleItemDetail.fulfilled]: (state, action) => {
       state.loading = false;
-      state.courseList= action.payload.responseData;
+      state.ItemList= action.payload.responseData;
       state.authorization = action.payload.authorization; 
     },
-    [getSingleCourseDetail.rejected]: (state, action) => {
+    [getSingleItemDetail.rejected]: (state, action) => {
       state.loading = false;
       state.has_enrolled = false;
     },
@@ -137,10 +137,10 @@ const myCourseSlice = createSlice({
       state.loading = false;
       state.success = true;
       state.authorization = null;
-      state.courseList = [];
+      state.ItemList = [];
     },
   },
 });
 
 
-export default myCourseSlice.reducer;
+export default myItemSlice.reducer;

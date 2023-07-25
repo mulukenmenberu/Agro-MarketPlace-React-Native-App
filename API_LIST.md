@@ -1,6 +1,6 @@
 # required apis for  the app
 
-## My Items (courses_taken) api
+## My Items (Items_taken) api
 ```
     {
         "today_progress": {
@@ -8,16 +8,16 @@
             "": "",
             "additional_field":""
         },
-        "MY_ENROLLED_COURSES": [
+        "MY_ENROLLED_ITEMS": [
             {
-                "course_name": "some_name",
+                "Item_name": "some_name",
                 "instructor": "",
                 "additional_field":"",
                 "status": "completed",
                 "progress": "100%"
             },
             {
-                "course_name": "other course",
+                "Item_name": "other Items",
                 "instructor": "",
                 "additional_field":"",
                 "status": "in progress",

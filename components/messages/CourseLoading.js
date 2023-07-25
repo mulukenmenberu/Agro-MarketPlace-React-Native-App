@@ -13,7 +13,7 @@ import { COLOR } from "../../config/Color";
 
 import { horizontalScale, verticalScale, moderateScale } from '../../config/Device'
 
-const CourseLoading = () => {
+const ItemLoading = () => {
     return (
         <View style={styles.container}>
             <SkeletonPlaceholder>
@@ -165,4 +165,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default CourseLoading;
+export default ItemLoading;
