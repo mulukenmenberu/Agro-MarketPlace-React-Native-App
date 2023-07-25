@@ -40,9 +40,7 @@ export default function Login({ chnagePage, navigation }) {
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
-  const chnagePages = (value) => {
-    chnagePage(value)
-  }
+ 
   const doLogin = () => {
     if (!isConnected) {
       Alert.alert("Network error. please check your data or connect to wifi")
@@ -172,7 +170,7 @@ export default function Login({ chnagePage, navigation }) {
             </View>
           </Pressable>
           <Text style={{ color: 'red', alignSelf: 'center' }}>{loginErrormessage}</Text>
-          <Text style={{ fontSize: moderateScale(15), color: COLOR.textColor, alignSelf: 'center' }}>Don't have an account? <Text onPress={() => chnagePages('register')} style={{ color: COLOR.sliderActive }}>Sign Up</Text></Text>
+          <Text style={{ fontSize: moderateScale(15), color: COLOR.textColor, alignSelf: 'center' }}>Don't have an account? <Text onPress={() => navigation.navigate('Register')} style={{ color: COLOR.sliderActive }}>Sign Up</Text></Text>
           <View style={{ flexDirection: 'row', paddingVertical: verticalScale(20), alignSelf: 'center' }}>
 
           </View>

@@ -23,7 +23,7 @@ import { CreateUser } from "../config/Realm";
 
 
 const { width, height } = Dimensions.get('screen')
-export default function Register({ chnagePage, navigation }) {
+export default function Register({ navigation }) {
   const [fullname, setFullName] = useState('')
   const [email, setEmil] = useState('')
   const [password, setPassword] = useState('')

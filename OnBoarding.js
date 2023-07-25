@@ -43,7 +43,7 @@ export default function OnBoarding({ navigation }) {
       if (loggedInUser > 0 && appHasVisitted == 1) {
         // navigation.navigate('DashboardTabs')
       } else if (appHasVisitted == 1) {
-        // navigation.navigate('LoginRegister')
+        // navigation.navigate('Login')
       } else {
         saveCache(1)
       }
@@ -65,7 +65,7 @@ export default function OnBoarding({ navigation }) {
            <Text style={styles.centeredText}>
         Signup and explore various agricultural products
       </Text>
-      <TouchableOpacity onPress={()=>navigation.navigate('LoginRegister')} style={{ marginTop:verticalScale(50),width: "80%", height: verticalScale(60), backgroundColor: 'green', borderRadius: moderateScale(10), alignItems: 'center', justifyContent: 'center' }}>
+      <TouchableOpacity onPress={()=>navigation.navigate('Login')} style={{ marginTop:verticalScale(50),width: "80%", height: verticalScale(60), backgroundColor: 'green', borderRadius: moderateScale(10), alignItems: 'center', justifyContent: 'center' }}>
         <Text style={{ color: COLOR.heading1, fontSize: moderateScale(20) }}>Get Started</Text>
       </TouchableOpacity>
       <StatusBar backgroundColor={COLOR.loginBgColor} barStyle={COLOR.statusBarColor} />

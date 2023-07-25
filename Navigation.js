@@ -13,7 +13,6 @@ import DashBoard from "./components/DashBoard";
 import  DashboardTabs  from "./components/DashboardTabs";
 import CoursePreview from "./components/CoursePreview";
 import Courses from "./components/Courses";
-import LoginRegister from "./components/LoginRegister";
 import CourseContent from "./components/CourseContent";
 import { getData, setData } from './storage/Storage';
 export default function Navigation() {
@@ -25,7 +24,7 @@ export default function Navigation() {
       .then((value)=>{
         setIntroViewed(value)
         // if(value=='visited'){
-        //   navigation.navigate('LoginRegister', { page: 'login' })
+        //   navigation.navigate('Login', { page: 'login' })
         // }
       });
 
@@ -46,7 +45,6 @@ export default function Navigation() {
       <stack.Screen name="Register" component={Register} />
       <stack.Screen name="DashboardTabs" component={DashboardTabs} />
       <stack.Screen name="CoursePreview" component={CoursePreview} />
-      <stack.Screen name="LoginRegister" component={LoginRegister} />
       <stack.Screen name="Courses" component={Courses} />
       <stack.Screen name="CourseContent" component={CourseContent} />
 

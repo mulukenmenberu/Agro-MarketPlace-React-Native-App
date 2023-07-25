@@ -50,18 +50,18 @@ useEffect(() => {
    const destroySession = ()=>{
     destroyUserData()
     RNRestart.Restart();
-    // navigation.navigate('LoginRegister')
+    // navigation.navigate('Login')
    }
     return (
         <SafeAreaView>
             <View style={styles.container}>
                 <Text style={{ fontWeight: 'bold', fontSize: moderateScale(25), color: COLOR.labelColor }}>Account</Text>
-                <Image
+                {/* <Image
                     style={{ alignSelf: 'center',
                     width:horizontalScale(100),
                     height:verticalScale(100)}}
                     source={require('../assets/svg/default-avatar.png')}
-                />
+                /> */}
                 <View>
                     <View style={{ paddingTop: verticalScale(25), flexDirection: 'row', justifyContent: 'space-between' }}>
                         <Text style={{ fontSize: moderateScale(20), color: COLOR.labelColor }}>Favorite</Text>
