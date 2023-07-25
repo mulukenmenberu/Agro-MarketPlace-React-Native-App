@@ -5,7 +5,6 @@ import { horizontalScale, verticalScale, moderateScale } from '../config/Device'
 import Icon from 'react-native-vector-icons/Ionicons';
 import SvgUri from 'react-native-svg-uri';
 const { width, height } = Dimensions.get('window');
-import ExpandableCard from '../utils/ExpandableCard'
 import Loader from './messages/Loader';
 import { readUser } from '../config/Realm';
 import { getSingleCourseDetail } from '../redux/reducers/myCourseSlice'
@@ -90,25 +89,7 @@ const ItemDetail = ({ navigation, route }) => {
                     : ''}
 
             </View>
-            {loading ? <Loader /> :
-                <View style={{ flex: 1, backgroundColor: COLOR.lightBg }}>
-                    <FlatList
-                        data={data2}
-                        keyExtractor={(item) => item[0].id}
-                        renderItem={({ item }) => (
-                            <ExpandableCard
-                                navigation={navigation}
-                                title={item[0].title}
-                                content={item}
-                                course_id={course_id}
-                                completion={item[0].completion}
-                            />
-                        )}
-                        ListEmptyComponent={<EmptyCourseContent />} // Rendered when data2 is empty
-
-                    />
-
-                </View>}
+           
                 {/* {!has_content? <Text>nifvhiurhgiurthjg</Text>:''} */}
 
             <StatusBar backgroundColor={COLOR.darkBg} barStyle={COLOR.statusBarColor} />

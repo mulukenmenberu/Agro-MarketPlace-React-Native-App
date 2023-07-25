@@ -19,7 +19,6 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import CustomProgressBar from "./custom_tools/CustomProgressBar";
 import { Card, TextInput } from "react-native-paper";
 import { COLOR } from "../config/Color";
-import my_courses from '../data/my_courses.json'
 import { useSelector, useDispatch } from 'react-redux'
 const dimention = Dimensions.get('screen')
 import { horizontalScale, verticalScale, moderateScale } from '../config/Device'

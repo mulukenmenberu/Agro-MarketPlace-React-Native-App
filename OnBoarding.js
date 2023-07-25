@@ -14,7 +14,6 @@ import AppIntroSlider from "react-native-app-intro-slider";
 import SvgUri from 'react-native-svg-uri';
 import { horizontalScale, verticalScale, moderateScale } from './config/Device'
 import { getData, setData } from './storage/Storage';
-import { requestUserPermission, send } from "./utils/Notifications";
 const { width, height } = Dimensions.get('screen')
 import { CreateUser, readUser, reasdCache, saveCache } from "./config/Realm";
 
@@ -22,9 +21,7 @@ export default function OnBoarding({ navigation }) {
   const [isViwed, setViewd] = useState('')
 
   useEffect(() => {
-    requestUserPermission()
-    send()
-
+  
     // getData('introViewed')
     const userData = readUser();
     const appCache = reasdCache();
