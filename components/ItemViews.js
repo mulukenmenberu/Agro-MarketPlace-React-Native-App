@@ -1,5 +1,5 @@
 import { View, Text, Image, Platform, StatusBar, StyleSheet, Dimensions, Pressable, Alert } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { COLOR } from "../config/Color";
 import { ActivityIndicator, Colors } from 'react-native-paper';
 import { horizontalScale, verticalScale, moderateScale } from '../config/Device'
@@ -9,17 +9,47 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Card } from 'react-native-paper'
+import RBSheet from "react-native-raw-bottom-sheet";
+import { Slider } from '@miblanchard/react-native-slider';
+import { Input, Button } from 'react-native-elements';
 
 import SvgUri from 'react-native-svg-uri';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 const { width, height } = Dimensions.get('window');
 import { enrollItem, getSingleItemDetail, resetState } from '../redux/reducers/myItemSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import Loader from "./messages/Loader";
 import { readUser } from "../config/Realm";
 import { generatePreview } from '../utils/generateItemPreview';
-const ItemViews = ({ navigation, route }) => {
 
+const ItemViews = ({ navigation, route }) => {
+    const refRBSheet = useRef();
+    const [slider, setslider] = useState(0.2)
+    const [isSheetOpened, setSheetOpened] = useState(false)
+
+    const bottomShetOpened = () => {
+        setSheetOpened(true)
+      }
+      const bottomSheetClosed = () => {
+        setSheetOpened(false)
+    
+      }
+       // State to store selected payment method
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
+
+  // Function to handle payment method selection
+  const handlePaymentMethodSelect = (method) => {
+    setSelectedPaymentMethod(method);
+  };
+
+  // Function to proceed to payment
+  const handleProceedToPayment = () => {
+    // You can implement your payment processing logic here
+    // For this example, we'll just navigate to a confirmation screen
+    navigation.navigate('OrderConfirmation', {
+      paymentMethod: selectedPaymentMethod,
+    });
+  };
 
     const ItemList = [{}]
 
@@ -138,19 +168,18 @@ const ItemViews = ({ navigation, route }) => {
                                 <Text style={{ color: '#858597' }}>{"message"}</Text>
                             </View>
                         </Card> 
+                        
                         </ScrollView>
                     </View>
 
-                    <View style={{ paddingTop: verticalScale(70), flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <View style={{ paddingTop: verticalScale(40), flexDirection: 'row', justifyContent: 'space-around' }}>
                         <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: verticalScale(50), width: horizontalScale(140), borderRadius: moderateScale(20), backgroundColor: COLOR.starRatingBgColor }}>
                             <AntDesign name='heart' size={moderateScale(20)} color={COLOR.starRatingColor} />
 
 
                         </TouchableOpacity>
-                        <Pressable style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: verticalScale(50), width: horizontalScale(190), borderRadius: moderateScale(20), backgroundColor: COLOR.dashBoardMainColor }}>
-                            {
-                                <ActivityIndicator animating={true} color={COLOR.darkWhite} />
-                            }
+                        <Pressable onPress={() => refRBSheet.current.open()} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: verticalScale(50), width: horizontalScale(190), borderRadius: moderateScale(20), backgroundColor: COLOR.dashBoardMainColor }}>
+                       
                             <Text style={{ fontSize: moderateScale(17), color: '#fff' }}> Order </Text>
                         </Pressable>
                     </View>
@@ -158,6 +187,70 @@ const ItemViews = ({ navigation, route }) => {
                     {/* </ScrollView> */}
                 </View>
             </View>
+
+            <RBSheet
+
+ref={refRBSheet}
+closeOnDragDown={true}
+closeOnPressMask={false}
+height={verticalScale(300)}
+onOpen={bottomShetOpened}
+onClose={bottomSheetClosed}
+containerStyle={styles.backdropStyle}
+customStyles={{
+  wrapper: {
+    backgroundColor: "transparent"
+  },
+  draggableIcon: {
+    backgroundColor: "#000"
+  }
+}}
+>
+<View style={styles.container}>
+      <Text style={styles.title}>Checkout</Text>
+
+      <View style={styles.paymentMethodsContainer}>
+        <TouchableOpacity
+          style={[
+            styles.paymentMethod,
+            selectedPaymentMethod === 'credit_card'
+              ? styles.selectedPaymentMethod
+              : null,
+          ]}
+          onPress={() => handlePaymentMethodSelect('credit_card')}
+        >
+          <Text style={styles.paymentMethodText}>Credit Card</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[
+            styles.paymentMethod,
+            selectedPaymentMethod === 'paypal' ? styles.selectedPaymentMethod : null,
+          ]}
+          onPress={() => handlePaymentMethodSelect('paypal')}
+        >
+          <Text style={styles.paymentMethodText}>PayPal</Text>
+        </TouchableOpacity>
+
+        {/* Add more payment methods here */}
+      </View>
+
+      <Input
+        placeholder="Card Number"
+        leftIcon={{ type: 'font-awesome', name: 'credit-card' }}
+        containerStyle={styles.inputContainer}
+      />
+      {/* Add more input fields for card expiry, CVV, etc. */}
+
+      <Button
+        title="Proceed to Payment"
+        onPress={handleProceedToPayment}
+        disabled={!selectedPaymentMethod}
+        buttonStyle={styles.proceedButton}
+      />
+    </View>
+</RBSheet>
+
 
             <StatusBar backgroundColor={COLOR.darkBg} barStyle={COLOR.statusBarColor2} />
         </>
@@ -206,6 +299,37 @@ const styles = StyleSheet.create({
         right: 0,
         bottom: 0,
     },
+    title: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 20,
+      },
+      paymentMethodsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 20,
+      },
+      paymentMethod: {
+        borderWidth: 1,
+        borderColor: '#ccc',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+      },
+      selectedPaymentMethod: {
+        borderColor: '#007BFF',
+        backgroundColor: '#E1F5FE',
+      },
+      paymentMethodText: {
+        fontSize: 16,
+        color: '#333',
+      },
+      inputContainer: {
+        marginBottom: 20,
+      },
+      proceedButton: {
+        backgroundColor: '#007BFF',
+      },
     overlayIcon: {
         position: 'absolute',
         top: 10,

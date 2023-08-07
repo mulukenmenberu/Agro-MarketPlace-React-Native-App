@@ -1,0 +1,202 @@
+[
+    {
+        "name": "Apple",
+        "price": "120 ETB",
+        "supplier": "FruitLand",
+        "thumbnail": "URL_TO_APPLE_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_APPLE_GALLERY_IMAGE_1",
+            "URL_TO_APPLE_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Banana",
+        "price": "60 ETB",
+        "supplier": "YellowHarvest",
+        "thumbnail": "URL_TO_BANANA_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_BANANA_GALLERY_IMAGE_1",
+            "URL_TO_BANANA_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Orange",
+        "price": "80 ETB",
+        "supplier": "CitrusGrove",
+        "thumbnail": "URL_TO_ORANGE_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_ORANGE_GALLERY_IMAGE_1",
+            "URL_TO_ORANGE_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Grapes",
+        "price": "150 ETB",
+        "supplier": "VineyardFarm",
+        "thumbnail": "URL_TO_GRAPES_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_GRAPES_GALLERY_IMAGE_1",
+            "URL_TO_GRAPES_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Mango",
+        "price": "200 ETB",
+        "supplier": "TropicalFarms",
+        "thumbnail": "URL_TO_MANGO_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_MANGO_GALLERY_IMAGE_1",
+            "URL_TO_MANGO_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Pineapple",
+        "price": "90 ETB",
+        "supplier": "TropicalHarvest",
+        "thumbnail": "URL_TO_PINEAPPLE_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_PINEAPPLE_GALLERY_IMAGE_1",
+            "URL_TO_PINEAPPLE_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Watermelon",
+        "price": "70 ETB",
+        "supplier": "JuicyMelons",
+        "thumbnail": "URL_TO_WATERMELON_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_WATERMELON_GALLERY_IMAGE_1",
+            "URL_TO_WATERMELON_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Strawberry",
+        "price": "110 ETB",
+        "supplier": "BerryFields",
+        "thumbnail": "URL_TO_STRAWBERRY_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_STRAWBERRY_GALLERY_IMAGE_1",
+            "URL_TO_STRAWBERRY_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Papaya",
+        "price": "80 ETB",
+        "supplier": "ExoticFruits",
+        "thumbnail": "URL_TO_PAPAYA_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_PAPAYA_GALLERY_IMAGE_1",
+            "URL_TO_PAPAYA_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Kiwi",
+        "price": "90 ETB",
+        "supplier": "TropicalHarvest",
+        "thumbnail": "URL_TO_KIWI_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_KIWI_GALLERY_IMAGE_1",
+            "URL_TO_KIWI_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Blueberry",
+        "price": "80 ETB",
+        "supplier": "BerryFields",
+        "thumbnail": "URL_TO_BLUEBERRY_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_BLUEBERRY_GALLERY_IMAGE_1",
+            "URL_TO_BLUEBERRY_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Cherry",
+        "price": "120 ETB",
+        "supplier": "FreshFruits",
+        "thumbnail": "URL_TO_CHERRY_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CHERRY_GALLERY_IMAGE_1",
+            "URL_TO_CHERRY_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Pear",
+        "price": "70 ETB",
+        "supplier": "FruitLand",
+        "thumbnail": "URL_TO_PEAR_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_PEAR_GALLERY_IMAGE_1",
+            "URL_TO_PEAR_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Apricot",
+        "price": "90 ETB",
+        "supplier": "TropicalHarvest",
+        "thumbnail": "URL_TO_APRICOT_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_APRICOT_GALLERY_IMAGE_1",
+            "URL_TO_APRICOT_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Plum",
+        "price": "70 ETB",
+        "supplier": "FreshFruits",
+        "thumbnail": "URL_TO_PLUM_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_PLUM_GALLERY_IMAGE_1",
+            "URL_TO_PLUM_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Mandarin",
+        "price": "80 ETB",
+        "supplier": "CitrusGrove",
+        "thumbnail": "URL_TO_MANDARIN_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_MANDARIN_GALLERY_IMAGE_1",
+            "URL_TO_MANDARIN_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Raspberry",
+        "price": "110 ETB",
+        "supplier": "BerryFields",
+        "thumbnail": "URL_TO_RASPBERRY_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_RASPBERRY_GALLERY_IMAGE_1",
+            "URL_TO_RASPBERRY_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Blackberry",
+        "price": "80 ETB",
+        "supplier": "BerryFields",
+        "thumbnail": "URL_TO_BLACKBERRY_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_BLACKBERRY_GALLERY_IMAGE_1",
+            "URL_TO_BLACKBERRY_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Pomegranate",
+        "price": "90 ETB",
+        "supplier": "FreshFruits",
+        "thumbnail": "URL_TO_POMEGRANATE_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_POMEGRANATE_GALLERY_IMAGE_1",
+            "URL_TO_POMEGRANATE_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Cranberry",
+        "price": "70 ETB",
+        "supplier": "BerryFields",
+        "thumbnail": "URL_TO_CRANBERRY_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CRANBERRY_GALLERY_IMAGE_1",
+            "URL_TO_CRANBERRY_GALLERY_IMAGE_2"
+        ]
+    }
+]

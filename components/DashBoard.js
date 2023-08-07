@@ -30,6 +30,8 @@ import Loader from "./messages/Loader";
 import { getItemsProgress } from '../redux/reducers/myItemSlice'
 import RBSheet from "react-native-raw-bottom-sheet";
 
+import vegetablesData from '../data/vigitables.json'; // Replace this with the correct path to your JSON file
+
 export default function DashBoard({ navigation }) {
   const [isDataLoading, setDataLoading] = useState(false)
   const [student_id, setStudentId] = useState();
@@ -91,57 +93,7 @@ export default function DashBoard({ navigation }) {
   }
 
   // Dummy data for progressItemList
-  progressItemList = [
-    {
-      id: 1,
-      Item_title: 'Item 1',
-      thumb_image: 'https://example.com/images/Item1.jpg',
-      progress: 25,
-    },
-    {
-      id: 2,
-      Item_title: 'Item 2',
-      thumb_image: 'https://example.com/images/Item2.jpg',
-      progress: 50,
-    },
-    {
-      id: 3,
-      Item_title: 'Item 3',
-      thumb_image: 'https://example.com/images/Item3.jpg',
-      progress: 75,
-    },
-    {
-      id: 4,
-      Item_title: 'Item 4',
-      thumb_image: 'https://example.com/images/Item4.jpg',
-      progress: 100,
-    },
-    {
-      id: 1,
-      Item_title: 'Item 1',
-      thumb_image: 'https://example.com/images/Item1.jpg',
-      progress: 25,
-    },
-    {
-      id: 2,
-      Item_title: 'Item 2',
-      thumb_image: 'https://example.com/images/Item2.jpg',
-      progress: 50,
-    },
-    {
-      id: 3,
-      Item_title: 'Item 3',
-      thumb_image: 'https://example.com/images/Item3.jpg',
-      progress: 75,
-    },
-    {
-      id: 4,
-      Item_title: 'Item 4',
-      thumb_image: 'https://example.com/images/Item4.jpg',
-      progress: 100,
-    },
-    // Add more dummy data as needed
-  ];
+  progressItemList = vegetablesData
 
   const windowWidth = Dimensions.get('window').width;
   const numColumns = 2;
@@ -166,18 +118,16 @@ export default function DashBoard({ navigation }) {
   const renderItemCard = ({ item }) => {
     return (
       <Card onPress={() => navigation.navigate('ItemViews')} style={[styles.progressCard, { width: cardWidth }]} >
-        <View style={styles.cardContainer}>
-          <Image
-            source={{ uri: item.thumb_image }}
-            style={styles.ItemImage}
-          />
-          <View style={styles.ItemInfo}>
-            <Text style={styles.ItemTitle}>{item.Item_title}</Text>
-            <Text style={styles.teacherName}>No teacher name</Text>
-            <View style={styles.progressBarContainer}>
-            </View>
-          </View>
-        </View>
+       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+       <Text style={{fontWeight:'bold'}}>{item.name}</Text>
+       <Text style={{color:'orange',fontWeight:'bold'}}>{item.price}</Text>
+        </View> 
+        <Image
+          source={{ uri: item.thumbnail }}
+          style={styles.ItemImage}
+        />
+        <Text style={{alignSelf:'center', }}>Supplier: {item.supplier}</Text>
+
       </Card>
     );
   };
@@ -188,7 +138,7 @@ export default function DashBoard({ navigation }) {
     <View style={styles.container}>
       <View style={styles.topCard}>
         <View>
-          <Icon onPress={() => refRBSheet.current.open()} name="menu-unfold" size={moderateScale(24)} color={COLOR.labelColor} />
+          <Icon onPress={() => refRBSheet.current.open()} name="shoppingcart" size={moderateScale(24)} color={COLOR.labelColor} />
         </View>
         <View>
 
@@ -376,11 +326,11 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
   },
   progressCard: {
-    padding: 5,
+    padding: 10,
     // marginLeft: 20,
     // marginRight: 20,
     margin: 'auto',
-    marginTop: verticalScale(10),
+    marginTop: verticalScale(1),
     backgroundColor: COLOR.darkWhite,
     borderRadius: 15,
     shadowColor: '#ffffffff',
@@ -388,8 +338,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 3,
     elevation: 5,
-    height: verticalScale(120),
-    justifyContent: 'center'
+    height: verticalScale(150),
+    // justifyContent: 'center'
   },
   registerCard: {
     backgroundColor: COLOR.lightWhite,
@@ -438,4 +388,9 @@ const styles = StyleSheet.create({
   columnWrapper: {
     justifyContent: 'space-evenly', // Added this style to evenly distribute columns
   },
+  ItemImage: {
+    width: "100%",
+    height: "70%",
+    borderRadius: 20
+  }
 })

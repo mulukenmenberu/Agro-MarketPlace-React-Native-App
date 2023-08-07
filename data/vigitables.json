@@ -1,0 +1,233 @@
+[
+    {
+        "id": 1,
+        "name": "Onion",
+        "price": "100 ETB",
+        "supplier": "Mule",
+        "thumbnail": "https://5.imimg.com/data5/KY/SN/GLADMIN-29628673/0.png",
+        "gallery": [
+            "https://5.imimg.com/data5/KY/SN/GLADMIN-29628673/0.png",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGbSzbkk21KpNb3qgm_ONfT2FrOUfH9HZ0uQ&usqp=CAU"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Tomato",
+        "price": "80 ETB",
+        "supplier": "FreshFarms",
+        "thumbnail": "",
+        "gallery": [
+            "URL_TO_TOMATO_GALLERY_IMAGE_1",
+            "URL_TO_TOMATO_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Carrot",
+        "price": "60 ETB",
+        "supplier": "HealthyHarvest",
+        "thumbnail": "URL_TO_CARROT_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CARROT_GALLERY_IMAGE_1",
+            "URL_TO_CARROT_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Potato",
+        "price": "70 ETB",
+        "supplier": "FarmFresh",
+        "thumbnail": "URL_TO_POTATO_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_POTATO_GALLERY_IMAGE_1",
+            "URL_TO_POTATO_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Cucumber",
+        "price": "90 ETB",
+        "supplier": "GreenFields",
+        "thumbnail": "URL_TO_CUCUMBER_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CUCUMBER_GALLERY_IMAGE_1",
+            "URL_TO_CUCUMBER_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Bell Pepper",
+        "price": "120 ETB",
+        "supplier": "FreshVeggies",
+        "thumbnail": "URL_TO_BELL_PEPPER_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_BELL_PEPPER_GALLERY_IMAGE_1",
+            "URL_TO_BELL_PEPPER_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Spinach",
+        "price": "50 ETB",
+        "supplier": "OrganicGreens",
+        "thumbnail": "URL_TO_SPINACH_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_SPINACH_GALLERY_IMAGE_1",
+            "URL_TO_SPINACH_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Broccoli",
+        "price": "110 ETB",
+        "supplier": "GreensFarm",
+        "thumbnail": "URL_TO_BROCCOLI_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_BROCCOLI_GALLERY_IMAGE_1",
+            "URL_TO_BROCCOLI_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Lettuce",
+        "price": "70 ETB",
+        "supplier": "FreshSalads",
+        "thumbnail": "URL_TO_LETTUCE_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_LETTUCE_GALLERY_IMAGE_1",
+            "URL_TO_LETTUCE_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Cauliflower",
+        "price": "90 ETB",
+        "supplier": "HealthyHarvest",
+        "thumbnail": "URL_TO_CAULIFLOWER_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CAULIFLOWER_GALLERY_IMAGE_1",
+            "URL_TO_CAULIFLOWER_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Green Beans",
+        "price": "80 ETB",
+        "supplier": "FreshVeggies",
+        "thumbnail": "URL_TO_GREEN_BEANS_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_GREEN_BEANS_GALLERY_IMAGE_1",
+            "URL_TO_GREEN_BEANS_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Eggplant",
+        "price": "100 ETB",
+        "supplier": "FarmFresh",
+        "thumbnail": "URL_TO_EGGPLANT_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_EGGPLANT_GALLERY_IMAGE_1",
+            "URL_TO_EGGPLANT_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Zucchini",
+        "price": "70 ETB",
+        "supplier": "GreenFields",
+        "thumbnail": "URL_TO_ZUCCHINI_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_ZUCCHINI_GALLERY_IMAGE_1",
+            "URL_TO_ZUCCHINI_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Pumpkin",
+        "price": "120 ETB",
+        "supplier": "HealthyHarvest",
+        "thumbnail": "URL_TO_PUMPKIN_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_PUMPKIN_GALLERY_IMAGE_1",
+            "URL_TO_PUMPKIN_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Sweet Potato",
+        "price": "80 ETB",
+        "supplier": "FarmFresh",
+        "thumbnail": "URL_TO_SWEET_POTATO_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_SWEET_POTATO_GALLERY_IMAGE_1",
+            "URL_TO_SWEET_POTATO_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Beetroot",
+        "price": "90 ETB",
+        "supplier": "FreshFarms",
+        "thumbnail": "URL_TO_BEETROOT_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_BEETROOT_GALLERY_IMAGE_1",
+            "URL_TO_BEETROOT_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Radish",
+        "price": "70 ETB",
+        "supplier": "HealthyHarvest",
+        "thumbnail": "URL_TO_RADISH_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_RADISH_GALLERY_IMAGE_1",
+            "URL_TO_RADISH_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Spinach",
+        "price": "50 ETB",
+        "supplier": "OrganicGreens",
+        "thumbnail": "URL_TO_SPINACH_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_SPINACH_GALLERY_IMAGE_1",
+            "URL_TO_SPINACH_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Asparagus",
+        "price": "110 ETB",
+        "supplier": "GreensFarm",
+        "thumbnail": "URL_TO_ASPARAGUS_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_ASPARAGUS_GALLERY_IMAGE_1",
+            "URL_TO_ASPARAGUS_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Artichoke",
+        "price": "70 ETB",
+        "supplier": "FreshFarms",
+        "thumbnail": "URL_TO_ARTICHOKE_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_ARTICHOKE_GALLERY_IMAGE_1",
+            "URL_TO_ARTICHOKE_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Cabbage",
+        "price": "90 ETB",
+        "supplier": "HealthyHarvest",
+        "thumbnail": "URL_TO_CABBAGE_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CABBAGE_GALLERY_IMAGE_1",
+            "URL_TO_CABBAGE_GALLERY_IMAGE_2"
+        ]
+    }
+]

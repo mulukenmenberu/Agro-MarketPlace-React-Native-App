@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Milk",
+        "price": "50 ETB",
+        "supplier": "DairyFarm",
+        "thumbnail": "URL_TO_MILK_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_MILK_GALLERY_IMAGE_1",
+            "URL_TO_MILK_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Cheese",
+        "price": "200 ETB",
+        "supplier": "CheeseCo",
+        "thumbnail": "URL_TO_CHEESE_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CHEESE_GALLERY_IMAGE_1",
+            "URL_TO_CHEESE_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Butter",
+        "price": "80 ETB",
+        "supplier": "Creamery",
+        "thumbnail": "URL_TO_BUTTER_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_BUTTER_GALLERY_IMAGE_1",
+            "URL_TO_BUTTER_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Yogurt",
+        "price": "60 ETB",
+        "supplier": "YogurtDelight",
+        "thumbnail": "URL_TO_YOGURT_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_YOGURT_GALLERY_IMAGE_1",
+            "URL_TO_YOGURT_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Eggs",
+        "price": "70 ETB",
+        "supplier": "FarmFresh",
+        "thumbnail": "URL_TO_EGGS_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_EGGS_GALLERY_IMAGE_1",
+            "URL_TO_EGGS_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Cream",
+        "price": "90 ETB",
+        "supplier": "Creamery",
+        "thumbnail": "URL_TO_CREAM_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CREAM_GALLERY_IMAGE_1",
+            "URL_TO_CREAM_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Cottage Cheese",
+        "price": "100 ETB",
+        "supplier": "CheeseCo",
+        "thumbnail": "URL_TO_COTTAGE_CHEESE_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_COTTAGE_CHEESE_GALLERY_IMAGE_1",
+            "URL_TO_COTTAGE_CHEESE_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Sour Cream",
+        "price": "80 ETB",
+        "supplier": "Creamery",
+        "thumbnail": "URL_TO_SOUR_CREAM_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_SOUR_CREAM_GALLERY_IMAGE_1",
+            "URL_TO_SOUR_CREAM_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Condensed Milk",
+        "price": "90 ETB",
+        "supplier": "DairyFarm",
+        "thumbnail": "URL_TO_CONDENSED_MILK_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CONDENSED_MILK_GALLERY_IMAGE_1",
+            "URL_TO_CONDENSED_MILK_GALLERY_IMAGE_2"
+        ]
+    },
+    {
+        "name": "Cheese Spread",
+        "price": "70 ETB",
+        "supplier": "CheeseCo",
+        "thumbnail": "URL_TO_CHEESE_SPREAD_THUMBNAIL_IMAGE",
+        "gallery": [
+            "URL_TO_CHEESE_SPREAD_GALLERY_IMAGE_1",
+            "URL_TO_CHEESE_SPREAD_GALLERY_IMAGE_2"
+        ]
+    }
+]
